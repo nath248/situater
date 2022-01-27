@@ -22,10 +22,10 @@ function Locations() {
       <div className='locations-list'>
       <h2>ALL LOCATIONS</h2>
         {locations.map(location => (
-            <div>
+            <div key={location.id}>
               <p>{location.name}</p>
             </div>
-          ))
+        ))
         }
       </div>
     </div>
