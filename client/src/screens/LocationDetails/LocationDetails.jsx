@@ -30,10 +30,10 @@ function LocationDetails() {
         <h3>Check Out All These Cool Locations!</h3>
         <h3>Explore New Horizons!</h3>
             <div className='location-details-info-box'>
-              <Link to={`/locations/${location.id}`}>{location.attractions[0].name}</Link>
-              <Link to={`/locations/${location.id}`}>{location.attractions[1].name}</Link>
-              <Link to={`/locations/${location.id}`}>{location.attractions[2].name}</Link>
-              <Link to={`/locations/${location.id}`}>{location.attractions[3].name}</Link>
+              <Link to={`/locations/${location.id}`}>{location.attractions[0]}</Link>
+              <Link to={`/locations/${location.id}`}>{location.attractions[1]}</Link>
+              <Link to={`/locations/${location.id}`}>{location.attractions[2]}</Link>
+              <Link to={`/locations/${location.id}`}>{location.attractions[3]}</Link>
             </div>
         <Link to={`/locations/${location.id}/edit`}>EDIT</Link>
         <button onClick={() => deleteLocation(location.id)}>DELETE</button>
