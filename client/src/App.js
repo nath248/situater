@@ -36,7 +36,8 @@ const App = () => {
         <Route path="/locations" element={<Locations user={user} />}/>
         <Route path="/locations/:id" element={<LocationDetails user={user} />} />
         <Route path="/locations/:id/edit" element={user ? <EditLocation user={user} /> : <Navigate to='/' />} />
-        <Route path="/add-location" element={user ? <AddLocation user={user} /> : <Navigate to="/signup" />} />
+        {/* <Route path="/add-location" element={user ? <AddLocation user={user} /> : <Navigate to="/signup" />} /> */}
+        <Route path="/add-location" element={<AddLocation user={user} />} />
         <Route path="/attractions" element={<Attractions />}/>
         <Route path="/attractions/:id" element={<AttractionDetails user={user} />} />
         <Route path="/attractions/:id/edit" element={user ? <EditAttraction user={user} /> : <Navigate to='/' />} />
