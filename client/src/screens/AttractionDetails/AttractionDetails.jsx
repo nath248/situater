@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { getAttraction, deleteAttraction } from '../../services/attractions'
 import { useParams, Link } from 'react-router-dom'
 
-function AttractionDetails() {
+function AttractionDetails({location}) {
   const [attraction, setAttraction] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
@@ -29,8 +29,10 @@ function AttractionDetails() {
       <div className='attraction-details-info'>
         <h3>Check Out All This Cool Attraction!</h3>
         <h3>Explore New Horizons!</h3>
-            <div className='attraction-details-info-box'>
-          <p>{attraction.location.name}</p>
+        <div className='attraction-details-info-box'>
+              {location.attraction === attraction.name ?
+                <p>{location.name}</p>: null}
+              <p></p>
               <p>{attraction.name}</p>
               <p>{attraction.type}</p>
               <p>{attraction.price}</p>
