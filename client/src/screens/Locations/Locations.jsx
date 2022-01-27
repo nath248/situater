@@ -9,6 +9,7 @@ function Locations() {
     const fetchLocations = async () => {
       const allLocations = await getLocations()
       setLocations(allLocations)
+      console.log("Test")
     }
     fetchLocations()
   }, [])

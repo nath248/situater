@@ -197,7 +197,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-r"^https://\w+\.domain\.com$",
+"^https://\w+\.domain\.com$",
 ]
 
 CORS_ALLOW_METHODS = [
@@ -217,6 +217,5 @@ CORS_ALLOW_HEADERS = [
 'dnt',
 'origin',
 'user-agent',
-'x-csrftoken',
 'x-requested-with',
 ]
