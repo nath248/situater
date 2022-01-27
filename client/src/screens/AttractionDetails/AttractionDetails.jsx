@@ -36,8 +36,8 @@ function AttractionDetails() {
               <p>{attraction.price}</p>
               <p>{attraction.rating} rating</p>
             </div>
-        <Link to={`/attractions/${attraction._id}/edit`}>EDIT</Link>
-        <button onClick={() => deleteAttraction(attraction._id)}>DELETE</button>
+        <Link to={`/attractions/${attraction.id}/edit`}>EDIT</Link>
+        <button onClick={() => deleteAttraction(attraction.id)}>DELETE</button>
       </div>
     </div>
   )
