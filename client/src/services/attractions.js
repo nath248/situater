@@ -1,6 +1,6 @@
 import api from './apiConfig'
 
-export const getattractions = async () => {
+export const getAttractions = async () => {
   try {
       const response = await api.get('/attractions')
       return response.data

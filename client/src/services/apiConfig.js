@@ -9,7 +9,7 @@ const getToken = () => {
 const api = axios.create({
   baseURL: process.env.NODE_ENV === 'production'
       ? 'https://situater.herokuapp.com/'
-      : 'http://localhost:8000'
+      : 'http://localhost:8000/'
 })
 
 api.interceptors.request.use(async function (config) {

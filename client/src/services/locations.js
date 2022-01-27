@@ -2,7 +2,7 @@ import api from './apiConfig'
 
 export const getLocations = async () => {
   try {
-      const response = await api.get('/locations')
+      const response = await api.get('/locations/')
       return response.data
   } catch (error) {
       throw error

@@ -5,6 +5,15 @@ import './App.css';
 import Home from "./screens/Home/Home"
 import SignUp from './screens/SignUp/SignUp';
 import LogIn from './screens/LogIn/LogIn';
+import LogOut from './screens/LogOut/LogOut';
+import Locations from './screens/Locations/Locations';
+import LocationDetails from './screens/LocationDetails/LocationDetails'
+import AddLocation from './screens/AddLocation/AddLocation'
+import EditLocation from './screens/EditLocation/EditLocation'
+import Attractions from './screens/Attractions/Attractions';
+import AttractionDetails from './screens/AttractionDetails/AttractionDetails'
+import EditAttraction from './screens/EditAttraction/EditAttraction'
+import AddAttraction from './screens/AddAttraction/AddAttraction'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -23,14 +32,15 @@ const App = () => {
         <Route path="/" element={<Home user={user} />} />
         <Route path="/signup" element={<SignUp setUser={setUser}/>} />
         <Route path="/login" element={<LogIn setUser={setUser}/>} />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
+        <Route path="/logout" element={<LogOut setUser={setUser}/>} />
+        <Route path="/locations" element={<Locations user={user} />}/>
+        <Route path="/locations/:id" element={<LocationDetails user={user} />} />
+        <Route path="/locations/:id/edit" element={user ? <EditLocation user={user} /> : <Navigate to='/' />} />
+        <Route path="/add-location" element={user ? <AddLocation user={user} /> : <Navigate to="/sign-up" />} />
+        <Route path="/attractions" element={<Attractions />}/>
+        <Route path="/attractions/:id" element={<AttractionDetails user={user} />} />
+        <Route path="/attractions/:id/edit" element={user ? <EditAttraction user={user} /> : <Navigate to='/' />} />
+        <Route path="/add-attraction" element={user ? <AddAttraction user={user} /> : <Navigate to="/sign-up" />} />
       </Routes>
     </div>
   );
