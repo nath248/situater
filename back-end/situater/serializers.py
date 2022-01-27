@@ -5,7 +5,7 @@ class AttractionSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Attraction
-        fields = ['name', 'image', 'type', 'price', 'rating']
+        fields = ['id', 'name', 'image', 'type', 'price', 'rating']
 
 
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
@@ -13,4 +13,4 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Location
-        fields = ['name', 'image', 'attractions']
+        fields = ['id', 'name', 'image', 'attractions']
