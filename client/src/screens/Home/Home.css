@@ -1,0 +1,22 @@
+.home-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+  justify-self: center;
+}
+
+.home-helper-text {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-helper-text h1 {
+  font-size: 64px;
+  font-weight: 100;
+}
+
+.home-helper-text p {
+  font-size: 30px;
+}
