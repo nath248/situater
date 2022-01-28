@@ -1,10 +1,14 @@
+.locations-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .locations-list h2 {
   font-size: 60px;
   font-weight: 500;
   text-decoration: underline;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .location-link {
@@ -16,5 +20,6 @@
 
 .location-link a {
   color: #03045e;
-  padding: 10px 0;
+  padding: 20px 0;
+  font-size: 40px;
 }
