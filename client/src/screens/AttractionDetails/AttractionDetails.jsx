@@ -32,7 +32,7 @@ function AttractionDetails(props) {
     return <h1>Loading...</h1>
   }
 
-  props.setToggle((prevToggle) => !prevToggle);
+
 
   return (
     <div className='attraction-details-main'>

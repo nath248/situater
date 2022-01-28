@@ -17,7 +17,6 @@ import AddAttraction from './screens/AddAttraction/AddAttraction'
 
 const App = () => {
   const [user, setUser] = useState(null)
-  const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -34,13 +33,13 @@ const App = () => {
         <Route path="/signup" element={<SignUp setUser={setUser}/>} />
         <Route path="/login" element={<LogIn setUser={setUser}/>} />
         <Route path="/logout" element={<LogOut setUser={setUser}/>} />
-        <Route path="/locations" element={<Locations user={user} setToggle={setToggle} />}/>
-        <Route path="/locations/:id" element={<LocationDetails user={user} setToggle={setToggle} />} />
+        <Route path="/locations" element={<Locations user={user} />}/>
+        <Route path="/locations/:id" element={<LocationDetails user={user} />} />
         <Route path="/locations/:id/edit" element={user ? <EditLocation user={user} /> : <Navigate to='/' />} />
         {/* <Route path="/add-location" element={user ? <AddLocation user={user} /> : <Navigate to="/signup" />} /> */}
         <Route path="/add-location" element={<AddLocation user={user} />} />
-        <Route path="/attractions" element={<Attractions setToggle={setToggle} />}/>
-        <Route path="/attractions/:id" element={<AttractionDetails user={user} setToggle={setToggle} />} />
+        <Route path="/attractions" element={<Attractions />}/>
+        <Route path="/attractions/:id" element={<AttractionDetails user={user} />} />
         <Route path="/attractions/:id/edit" element={user ? <EditAttraction user={user} /> : <Navigate to='/' />} />
         <Route path="/add-attraction" element={user ? <AddAttraction user={user} /> : <Navigate to="/signup" />} />
       </Routes>

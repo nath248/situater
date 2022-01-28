@@ -2,7 +2,7 @@ import './Locations.css'
 import { useState, useEffect } from 'react'
 import { getLocations } from '../../services/locations'
 
-function Locations() {
+function Locations(props) {
   const [locations, setLocations] = useState([])
 
   useEffect(() => {
