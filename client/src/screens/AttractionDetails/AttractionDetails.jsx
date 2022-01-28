@@ -41,7 +41,7 @@ function AttractionDetails() {
         <h3>Check Out All This Cool Attraction!</h3>
         <h3>Explore New Horizons!</h3>
         <div className='attraction-details-info-box'>
-          {location.attractions.map(list => {
+          {location.attractions && location.attractions.map(list => {
             return list === attraction.name ?
             <p>{location.name}</p>: null
           })
