@@ -2,6 +2,7 @@ import './Locations.css'
 import { useState, useEffect } from 'react'
 import { getLocations } from '../../services/locations'
 import Layout from '../../components/Layout/Layout' 
+import {Link} from 'react-router-dom'
 
 function Locations(props) {
   const [locations, setLocations] = useState([])
@@ -23,8 +24,8 @@ function Locations(props) {
       <div className='locations-list'>
       <h2>ALL LOCATIONS</h2>
         {locations.map(location => (
-            <div key={location.id}>
-              <p>{location.name}</p>
+            <div className='location-link' key={location.id}>
+              <Link>{location.name}</Link>
             </div>
         ))
         }
