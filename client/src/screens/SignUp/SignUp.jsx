@@ -1,7 +1,8 @@
 import './SignUp.css'
 import { useState } from 'react'
 import { signUp } from '../../services/users'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout'
 
 function SignUp(props) {
   const navigate = useNavigate()
@@ -56,6 +57,7 @@ function SignUp(props) {
 
   const { username, email, password, passwordConfirmation } = form
   return (
+    <Layout user={props.user}>
     <div className='sign-up-main'>
       <div className='sign-up-helper-text'>
         <h1>Sign Up for exclusive access!</h1>
@@ -75,7 +77,8 @@ function SignUp(props) {
           {renderError()}
         </form>
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

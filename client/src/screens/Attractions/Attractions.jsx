@@ -1,8 +1,9 @@
 import './Attractions.css'
 import { useState, useEffect } from 'react'
 import { getAttractions } from '../../services/attractions'
+import Layout from '../../components/Layout/Layout'
 
-function Attractions() {
+function Attractions(props) {
   const [attractions, setAttractions] = useState([])
 
   useEffect(() => {
@@ -14,6 +15,7 @@ function Attractions() {
   }, [])
 
   return (
+    <Layout user={props.user}>
     <div className='attractions-main'>
       <div className='attractions-images'>
 
@@ -27,7 +29,8 @@ function Attractions() {
           ))
         }
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

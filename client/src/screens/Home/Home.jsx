@@ -1,9 +1,9 @@
 import './Home.css'
-// import Layout from '../../components/Layout/Layout'
+import Layout from '../../components/Layout/Layout'
 
-const Home = (props) => {
+function Home(props) {
   return (
-    // <Layout user={props.user}>
+    <Layout user={props.user}>
       <div className='home-main'>
         <div className='home-helper-text'>
           <h1>Welcome to the Situater App!</h1>
@@ -14,7 +14,7 @@ const Home = (props) => {
           <img src='' alt=''/>
         </div>
       </div>
-    // </Layout>
+    </Layout>
   )
 }
 

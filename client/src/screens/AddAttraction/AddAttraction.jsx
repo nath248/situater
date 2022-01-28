@@ -2,8 +2,9 @@ import './AddAttraction.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createAttraction } from '../../services/attractions'
+import Layout from '../../components/Layout/Layout'
 
-function AddAttraction() {
+function AddAttraction(props) {
 
   let navigate = useNavigate()
 
@@ -31,6 +32,7 @@ function AddAttraction() {
   }
 
   return (
+    <Layout user={props.user}>
     <div className='add-attraction-main'>
       <form onSubmit={handleSubmit}>
         <label>Location Name:</label>
@@ -47,7 +49,8 @@ function AddAttraction() {
         <input placeholder='Enter Rating' value={attraction.rating} name='image' required onChange={handleChange} />
         <button type='submit'>ADD</button>
       </form>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

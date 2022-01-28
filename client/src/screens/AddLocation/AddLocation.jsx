@@ -2,8 +2,9 @@ import './AddLocation.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createLocation } from '../../services/locations'
+import Layout from '../../components/Layout/Layout'
 
-function AddLocation() {
+function AddLocation(props) {
 
   let navigate = useNavigate()
 
@@ -27,6 +28,7 @@ function AddLocation() {
   }
 
   return (
+    <Layout user={props.user}>
     <div className='add-location-main'>
       <form onSubmit={handleSubmit}>
         <label>Location Name:</label>
@@ -35,7 +37,8 @@ function AddLocation() {
         <input placeholder='Enter Image URL' value={location.image} name='image' required onChange={handleChange} />
         <button type='submit'>ADD</button>
       </form>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

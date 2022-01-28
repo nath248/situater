@@ -2,8 +2,9 @@ import './EditLocation.css'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getLocation, updateLocation } from '../../services/locations'
+import Layout from '../../components/Layout/Layout'
 
-function EditLocation() {
+function EditLocation(props) {
 
   let navigate = useNavigate()
 
@@ -37,6 +38,7 @@ function EditLocation() {
   }
 
   return (
+    <Layout user={props.user}>
     <div className='edit-location-main'>
       <form onSubmit={handleSubmit}>
         <label>Location Name:</label>
@@ -45,7 +47,8 @@ function EditLocation() {
         <input placeholder='Enter Image URL' value={location.image} name='image' required onChange={handleChange} />
         <button type='submit'>EDIT</button>
       </form>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

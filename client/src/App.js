@@ -15,7 +15,7 @@ import AttractionDetails from './screens/AttractionDetails/AttractionDetails'
 import EditAttraction from './screens/EditAttraction/EditAttraction'
 import AddAttraction from './screens/AddAttraction/AddAttraction'
 
-const App = () => {
+function App() {
   const [user, setUser] = useState(null)
 
   useEffect(() => {

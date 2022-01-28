@@ -1,6 +1,7 @@
 import './Locations.css'
 import { useState, useEffect } from 'react'
 import { getLocations } from '../../services/locations'
+import Layout from '../../components/Layout/Layout' 
 
 function Locations(props) {
   const [locations, setLocations] = useState([])
@@ -14,6 +15,7 @@ function Locations(props) {
   }, [])
 
   return (
+    <Layout user={props.user}>
     <div className='locations-main'>
       <div className='locations-images'>
 
@@ -27,7 +29,8 @@ function Locations(props) {
         ))
         }
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

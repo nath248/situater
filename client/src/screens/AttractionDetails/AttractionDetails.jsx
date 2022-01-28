@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getAttraction, deleteAttraction } from "../../services/attractions";
 import { getLocation } from "../../services/locations";
 import { useParams, Link } from "react-router-dom";
+import Layout from "../../components/Layout/Layout";
 
 function AttractionDetails(props) {
   const [attraction, setAttraction] = useState(null);
@@ -33,6 +34,7 @@ function AttractionDetails(props) {
   }
 
   return (
+    <Layout user={props.user}>
     <div className="attraction-details-main">
       <div className="attraction-details-img">
         <h3>Attraction Name</h3>
@@ -54,7 +56,8 @@ function AttractionDetails(props) {
         <Link to={`/attractions/${attraction.id}/edit`}>EDIT</Link>
         <button onClick={() => deleteAttraction(attraction.id)}>DELETE</button>
       </div>
-    </div>
+      </div>
+      </Layout>
   );
 }
 

@@ -2,8 +2,9 @@ import './EditAttraction.css'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getAttraction, updateAttraction } from '../../services/attractions'
+import Layout from '../../components/Layout/Layout'
 
-function EditAttraction() {
+function EditAttraction(props) {
   let navigate = useNavigate()
 
   const [attraction, setAttraction] = useState({
@@ -40,6 +41,7 @@ function EditAttraction() {
   }
 
   return (
+    <Layout user={props.user}>
     <div className='edit-attraction-main'>
       <form onSubmit={handleSubmit}>
         <label>Location Name:</label>
@@ -56,7 +58,8 @@ function EditAttraction() {
         <input placeholder='Enter Rating' value={attraction.rating} name='image' required onChange={handleChange} />
         <button type='submit'>ADD</button>
       </form>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

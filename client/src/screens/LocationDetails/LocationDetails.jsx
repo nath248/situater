@@ -2,8 +2,9 @@ import './LocationDetails.css'
 import { useState, useEffect } from 'react'
 import { getLocation, deleteLocation } from '../../services/locations'
 import { useParams, Link } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout'
 
-function LocationDetails() {
+function LocationDetails(props) {
   const [location, setLocation] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
@@ -22,6 +23,7 @@ function LocationDetails() {
   }
 
   return (
+    <Layout user={props.user}>
     <div className='location-details-main'>
       <div className='location-details-img'>
         <h3>Location Name</h3>
@@ -38,7 +40,8 @@ function LocationDetails() {
         <Link to={`/locations/${location.id}/edit`}>EDIT</Link>
         <button onClick={() => deleteLocation(location.id)}>DELETE</button>
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

@@ -2,6 +2,7 @@ import './LogIn.css'
 import { useState } from 'react'
 import { logIn } from '../../services/users'
 import { useNavigate } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout'
 
 function LogIn(props) {
   const navigate = useNavigate()
@@ -54,6 +55,7 @@ function LogIn(props) {
   const { username, password } = form
 
   return (
+    <Layout user={props.user}>
     <div className='log-in-main'>
       <div className='log-in-helper-text'>
         <h1>Log In for exclusive access!</h1>
@@ -68,7 +70,8 @@ function LogIn(props) {
           {renderError()}
         </form>
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 
