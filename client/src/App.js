@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route, Navigate, useParams } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { verifyUser } from './services/users'
 import './App.css';
 import Home from "./screens/Home/Home"
