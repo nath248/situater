@@ -25,7 +25,7 @@ function Locations(props) {
       <h2>ALL LOCATIONS</h2>
         {locations.map(location => (
             <div className='location-link' key={location.id}>
-            <Link to={`/location/${locations.id}`}>{location.name}</Link>
+            <Link to={`/locations/${location.id}`}>{location.name}</Link>
             </div>
         ))
         }
