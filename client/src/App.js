@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useParams } from 'react-router-dom'
 import { verifyUser } from './services/users'
 import './App.css';
 import Home from "./screens/Home/Home"
@@ -14,9 +14,12 @@ import Attractions from './screens/Attractions/Attractions';
 import AttractionDetails from './screens/AttractionDetails/AttractionDetails'
 import EditAttraction from './screens/EditAttraction/EditAttraction'
 import AddAttraction from './screens/AddAttraction/AddAttraction'
+import { getLocation } from './services/locations'
 
 const App = () => {
   const [user, setUser] = useState(null)
+  const [location, setLocation] = useState(null)
+  const { id } = useParams()
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -25,6 +28,15 @@ const App = () => {
     }
     fetchUser()
   }, [])
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      const location = await getLocation(id)
+      setLocation(location)
+      // setLoaded(true)
+    }
+    fetchLocation()
+  }, [id])
 
   return (
     <div className="App">
@@ -39,7 +51,7 @@ const App = () => {
         {/* <Route path="/add-location" element={user ? <AddLocation user={user} /> : <Navigate to="/signup" />} /> */}
         <Route path="/add-location" element={<AddLocation user={user} />} />
         <Route path="/attractions" element={<Attractions />}/>
-        <Route path="/attractions/:id" element={<AttractionDetails user={user} />} />
+        <Route path="/attractions/:id" element={<AttractionDetails user={user} location={location} />} />
         <Route path="/attractions/:id/edit" element={user ? <EditAttraction user={user} /> : <Navigate to='/' />} />
         <Route path="/add-attraction" element={user ? <AddAttraction user={user} /> : <Navigate to="/signup" />} />
       </Routes>
