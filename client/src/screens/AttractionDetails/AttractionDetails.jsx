@@ -4,7 +4,7 @@ import { getAttraction, deleteAttraction } from '../../services/attractions'
 import { getLocation } from '../../services/locations'
 import { useParams, Link } from 'react-router-dom'
 
-function AttractionDetails() {
+function AttractionDetails(props) {
   const [attraction, setAttraction] = useState(null)
   const [location, setLocation] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
@@ -32,6 +32,8 @@ function AttractionDetails() {
     return <h1>Loading...</h1>
   }
 
+  props.setToggle((prevToggle) => !prevToggle);
+
   return (
     <div className='attraction-details-main'>
       <div className='attraction-details-img'>
@@ -41,7 +43,7 @@ function AttractionDetails() {
         <h3>Check Out All This Cool Attraction!</h3>
         <h3>Explore New Horizons!</h3>
         <div className='attraction-details-info-box'>
-          {location.attractions && location.attractions.map(list => {
+          {location.attractions.length && location.attractions.map(list => {
             return list === attraction.name ?
             <p>{location.name}</p>: null
           })
