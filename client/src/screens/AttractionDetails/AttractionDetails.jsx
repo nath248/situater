@@ -23,7 +23,7 @@ function AttractionDetails() {
     const fetchLocation = async () => {
       const location = await getLocation(id)
       setLocation(location)
-      // setLoaded(true)
+      setLoaded(true)
     }
     fetchLocation()
   }, [id])
