@@ -11,7 +11,7 @@ export const getAttractions = async () => {
 
 export const getAttraction = async id => {
   try {
-      const response = await api.get(`/attractions/${id}`)
+      const response = await api.get(`/attractions/${id}/`)
       return response.data
   } catch (error) {
       throw error
