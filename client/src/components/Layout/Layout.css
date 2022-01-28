@@ -8,6 +8,7 @@
 
 .layout-children {
   padding: 100px 60px;
+  background-color: #f3fdff;
 }
 
 @media (max-width: 500px) {
