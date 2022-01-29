@@ -35,7 +35,7 @@ function LocationDetails(props) {
           <div className='location-details-info-box'>
           {location.attractions.length &&
             location.attractions.map((list) => (
-              <Link to={`/locations/${location.id}`}>{list.name}</Link>
+              <Link to={`/locations/${location.id}`} key={list.id}>{list.name}</Link>
           ))}
             </div>
         <Link to={`/locations/${location.id}/edit`}>EDIT</Link>

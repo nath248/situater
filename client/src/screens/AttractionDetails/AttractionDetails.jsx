@@ -46,7 +46,7 @@ function AttractionDetails(props) {
         <div className="attraction-details-info-box">
           {location.length &&
             location.map((list) => (
-            list.id === attraction.location ? <h1>{list.name}</h1> : null
+            list.id === attraction.location ? <h1 key={list.id} >{list.name}</h1> : null
           ))}
           <p>{location.name}</p>
           <p>{attraction.type}</p>
