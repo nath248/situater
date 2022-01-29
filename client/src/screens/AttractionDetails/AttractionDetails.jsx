@@ -1,13 +1,13 @@
 import "./AttractionDetails.css";
 import { useState, useEffect } from "react";
 import { getAttraction, deleteAttraction } from "../../services/attractions";
-import { getLocation } from "../../services/locations";
+import { getLocations } from "../../services/locations";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 
 function AttractionDetails(props) {
   const [attraction, setAttraction] = useState(null);
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState([]);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
 
@@ -22,12 +22,12 @@ function AttractionDetails(props) {
 
   useEffect(() => {
     const fetchLocation = async () => {
-      const location = await getLocation(id);
+      const location = await getLocations();
       setLocation(location);
       setLoaded(true);
     };
     fetchLocation();
-  }, [id]);
+  }, []);
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -37,21 +37,21 @@ function AttractionDetails(props) {
     <Layout user={props.user}>
     <div className="attraction-details-main">
       <div className="attraction-details-img">
-        <h3>Attraction Name</h3>
+          <h3>{attraction.name}</h3>
+          <img src={`${attraction.image}`} alt={attraction.name} />
       </div>
       <div className="attraction-details-info">
         <h3>Check Out All This Cool Attraction!</h3>
         <h3>Explore New Horizons!</h3>
         <div className="attraction-details-info-box">
-          {location.attractions.length &&
-            location.attractions.map((list) => {
-              return list === attraction.name ? <p>{location.name}</p> : null;
-            })}
-          <p></p>
-          <p>{attraction.name}</p>
+          {location.length &&
+            location.map((list) => (
+            list.id === attraction.location ? <h1>{list.name}</h1> : null
+          ))}
+          <p>{location.name}</p>
           <p>{attraction.type}</p>
-          <p>{attraction.price}</p>
-          <p>{attraction.rating} rating</p>
+          <p>$ {attraction.price}</p>
+          <p>{attraction.rating} Rating</p>
         </div>
         <Link to={`/attractions/${attraction.id}/edit`}>EDIT</Link>
         <button onClick={() => deleteAttraction(attraction.id)}>DELETE</button>

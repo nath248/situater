@@ -190,17 +190,10 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-"https://domain.com",
 "https://situater.herokuapp.com",
-"http://localhost:8080",
-"http://127.0.0.1:9000",
 "http://localhost:8000",
 "http://localhost:8001",
 "https://situater.netlify.app"
-]
-
-CORS_ALLOWED_ORIGIN_REGEXES = [
-"^https://\w+\.domain\.com$",
 ]
 
 CORS_ALLOW_METHODS = [
