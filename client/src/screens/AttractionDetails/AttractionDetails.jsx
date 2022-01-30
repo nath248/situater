@@ -2,10 +2,11 @@ import "./AttractionDetails.css";
 import { useState, useEffect } from "react";
 import { getAttraction, deleteAttraction } from "../../services/attractions";
 import { getLocations } from "../../services/locations";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 
 function AttractionDetails(props) {
+  const nav = useNavigate();
   const [attraction, setAttraction] = useState(null);
   const [location, setLocation] = useState([]);
   const [isLoaded, setLoaded] = useState(false);
@@ -33,6 +34,12 @@ function AttractionDetails(props) {
     return <h1>Loading...</h1>;
   }
 
+  const handleDelete = () => {
+    deleteAttraction(attraction.id)
+    nav("/attractions")
+    props.setToggle((prevToggle) => !prevToggle)
+  }
+
   return (
     <Layout user={props.user}>
     <div className="attraction-details-main">
@@ -54,7 +61,7 @@ function AttractionDetails(props) {
           <p>{attraction.rating} Rating</p>
         </div>
         <Link to={`/attractions/${attraction.id}/edit`}>EDIT</Link>
-        <button onClick={() => deleteAttraction(attraction.id)}>DELETE</button>
+        <button onClick={handleDelete}>DELETE</button>
       </div>
       </div>
       </Layout>

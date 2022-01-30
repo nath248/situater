@@ -54,7 +54,6 @@ function AddAttraction(props) {
               })
             }
           </select>
-        {/* <input placeholder='Enter Location Name' value="location-name" name='location-name' required onChange={handleChange} /> */}
         <label>Attraction Name:</label>
         <input placeholder='Enter Name' value={attraction.name} name='name' required onChange={handleChange} />
         <label>Image URL:</label>
