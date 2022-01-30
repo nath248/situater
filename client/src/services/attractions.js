@@ -20,7 +20,7 @@ export const getAttraction = async id => {
 
 export const createAttraction = async attraction => {
   try {
-      const response = await api.post('/attractions', attraction)
+      const response = await api.post('/attractions/', attraction)
       return response.data
   } catch (error) {
       throw error
@@ -29,7 +29,7 @@ export const createAttraction = async attraction => {
 
 export const updateAttraction = async (id, attraction) => {
   try {
-      const response = await api.put(`/attractions/${id}`, attraction)
+      const response = await api.put(`/attractions/${id}/`, attraction)
       return response.data
   } catch (error) {
       throw error
@@ -38,7 +38,7 @@ export const updateAttraction = async (id, attraction) => {
 
 export const deleteAttraction = async id => {
   try {
-      const response = await api.delete(`/attractions/${id}`)
+      const response = await api.delete(`/attractions/${id}/`)
       return response.data
   } catch (error) {
       throw error

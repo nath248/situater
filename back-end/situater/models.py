@@ -15,7 +15,7 @@ class Attraction(models.Model):
     type = models.CharField(max_length=800)
     price = models.PositiveIntegerField(default=0)
     rating = models.CharField(max_length=800)
-    location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='attractions')
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='attractions', null=True, blank=True)
 
     def __str__(self):
         return self.name

@@ -11,19 +11,20 @@ function AddLocation(props) {
   const [location, setLocation] = useState({
     name: '',
     image: '',
+    attractions: []
   })
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setLocation({
-      ...Location,
+      ...location,
       [name]: value,
     })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await createLocation(Location)
+    await createLocation(location)
     navigate('/locations')
   }
 

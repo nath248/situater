@@ -3,8 +3,8 @@ import api from './apiConfig'
 export const signUp = async (credentials) => {
   try {
     const resp = await api.post('/user/signup/', credentials)
-    localStorage.setItem('token', resp.data.access)
-    localStorage.setItem('refresh', resp.data.refresh)
+    // localStorage.setItem('token', resp.data.access)
+    // localStorage.setItem('refresh', resp.data.refresh)
     return resp
   } catch (error) {
     throw error

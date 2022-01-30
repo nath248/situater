@@ -20,7 +20,7 @@ export const getLocation = async id => {
 
 export const createLocation = async location => {
   try {
-      const response = await api.post('/locations', location)
+      const response = await api.post('/locations/', location)
       return response.data
   } catch (error) {
       throw error
@@ -29,7 +29,7 @@ export const createLocation = async location => {
 
 export const updateLocation = async (id, location) => {
   try {
-      const response = await api.put(`/locations/${id}`, location)
+      const response = await api.put(`/locations/${id}/`, location)
       return response.data
   } catch (error) {
       throw error
@@ -38,7 +38,7 @@ export const updateLocation = async (id, location) => {
 
 export const deleteLocation = async id => {
   try {
-      const response = await api.delete(`/locations/${id}`)
+      const response = await api.delete(`/locations/${id}/`)
       return response.data
   } catch (error) {
       throw error

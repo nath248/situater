@@ -64,9 +64,9 @@ function LogIn(props) {
       <div className='log-in-form'>
         <form onSubmit={onLogIn}>
           <label>Username</label>
-          <input required name="username" value={username} placeholder='Enter Username' onChange={handleChange}/>
+          <input required type="username" name="username" value={username} placeholder='Enter Username' onChange={handleChange}/>
           <label>Password</label>
-          <input required name="password" value={password} placeholder='Enter Password' onChange={handleChange} />
+          <input required type="password" name="password" value={password} placeholder='Enter Password' onChange={handleChange} />
           {renderError()}
         </form>
       </div>

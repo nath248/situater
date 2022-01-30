@@ -24,7 +24,7 @@ function Attractions(props) {
         <h2>ALL ATTRACTIONS</h2>
         {attractions.map(attraction => (
             <div>
-              <p>{attraction.name}</p>
+              <p key={attraction.id}>{attraction.name}</p>
             </div>
           ))
         }
