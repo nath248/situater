@@ -10,7 +10,7 @@ function AddAttraction(props) {
   let navigate = useNavigate()
 
   const [attraction, setAttraction] = useState({
-    location:'',
+    location: '',
     name: '',
     image: '',
     type: '',
