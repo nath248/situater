@@ -76,3 +76,5 @@ gunicorn
 whitenoise
 dj-database-url
 python-dotenv
+
+# Resources
