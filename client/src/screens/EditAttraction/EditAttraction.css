@@ -1,0 +1,67 @@
+.edit-attraction-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+  justify-self: center;
+}
+
+.edit-attraction-helper-text {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.edit-attraction-helper-text h1 {
+  font-size: 64px;
+  font-weight: 100;
+}
+
+.edit-attraction-helper-text p {
+  font-size: 30px;
+}
+
+.edit-attraction-form {
+  position: relative;
+  bottom: 120px;
+}
+
+.edit-attraction-form input,
+.edit-attraction-form select {
+  width: 560px;
+  height: 70px;
+  background-color: #caf0f8;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-left: 10px;
+}
+
+.edit-attraction-form input::placeholder {
+  font-size: 20px;
+}
+
+.edit-attraction-form label {
+  font-size: 40px;
+  position: relative;
+  right: 200px;
+}
+
+.edit-attraction-form label:first-child {
+  position: relative;
+  right: 160px;
+}
+
+/* .edit-attraction-form label: {
+  position: relative;
+  right: 200px;
+} */
+
+.edit-attraction-form button {
+  border: none;
+  background-color: #48cae4;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  text-decoration: underline;
+}

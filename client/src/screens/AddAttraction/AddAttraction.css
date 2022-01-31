@@ -23,10 +23,11 @@
 
 .add-attraction-form {
   position: relative;
-  bottom: 100px;
+  bottom: 120px;
 }
 
-.add-attraction-form input {
+.add-attraction-form input,
+.add-attraction-form select {
   width: 560px;
   height: 70px;
   background-color: #caf0f8;
@@ -48,8 +49,13 @@
 
 .add-attraction-form label:first-child {
   position: relative;
-  right: 165px;
+  right: 160px;
 }
+
+/* .add-attraction-form label: {
+  position: relative;
+  right: 200px;
+} */
 
 .add-attraction-form button {
   border: none;

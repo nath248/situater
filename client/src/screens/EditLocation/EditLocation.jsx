@@ -39,14 +39,20 @@ function EditLocation(props) {
 
   return (
     <Layout user={props.user}>
-    <div className='edit-location-main'>
-      <form onSubmit={handleSubmit}>
-        <label>Location Name:</label>
-        <input placeholder='Enter Name' value={location.name} name='name' required onChange={handleChange} />
-        <label>Image URL:</label>
-        <input placeholder='Enter Image URL' value={location.image} name='image' required onChange={handleChange} />
-        <button type='submit'>EDIT</button>
-      </form>
+      <div className='edit-location-main'>
+        <div className='edit-location-helper-text'>
+          <h1>Edit Location!</h1>
+          <p>Before completing form please ensure all data entered is correct.</p>
+        </div>
+        <div className='edit-location-form'>
+          <form onSubmit={handleSubmit}>
+            <label>Location Name:</label>
+            <input placeholder='Enter Name' value={location.name} name='name' required onChange={handleChange} />
+            <label>Image URL:</label>
+            <input placeholder='Enter Image URL' value={location.image} name='image' required onChange={handleChange} />
+            <button type='submit'>EDIT</button>
+          </form>
+        </div>
       </div>
     </Layout>
   )
