@@ -23,3 +23,21 @@
   padding: 20px 0;
   font-size: 40px;
 }
+
+.locations-images img {
+  margin: 0 10px;
+  transition: transform 0.2s;
+}
+
+/* .hidden {
+  display: none;
+} */
+
+.locations-images img:hover {
+  margin: 0 10px;
+  transform: scale(1.1);
+}
+
+/* .hidden:hover {
+  display: inline;
+} */
