@@ -18,14 +18,12 @@ function Attractions(props) {
   return (
     <Layout user={props.user}>
     <div className='attractions-main'>
+      <div className='attractions-images'>
         {attractions.map(attraction => (
-          <div className='attractions-images'>
             <img src={attraction.image} alt={attraction.name} />
-        {/* <h3 className='hidden'>{attractions[0].name}</h3>
-        <h3 className='hidden'>{attractions[1].name}</h3>
-        <h3 className='hidden'>{attractions[2].name}</h3> */}
-          </div>
+            // <h3 className='hidden'>{attraction.name}</h3>
         ))}
+        </div>
       <div className='attractions-list'>
         <h2>ALL ATTRACTIONS</h2>
         {attractions.map(attraction => (

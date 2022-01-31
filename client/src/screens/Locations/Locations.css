@@ -27,6 +27,8 @@
 .locations-images img {
   margin: 0 10px;
   transition: transform 0.2s;
+  width: 400px;
+  height: 350px;
 }
 
 /* .hidden {
@@ -41,3 +43,30 @@
 /* .hidden:hover {
   display: inline;
 } */
+
+@media only screen and (max-width: 560px) {
+  .locations-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .locations-images img {
+    width: 150px;
+  }
+
+  .locations-list h2 {
+    font-size: 40px;
+  }
+
+  .location-link {
+    background-color: #caf0f8;
+    width: 480px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .location-link a {
+    font-size: 25px;
+  }
+}

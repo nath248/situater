@@ -10,8 +10,8 @@ const authenticatedOptions = (
 )
 const unauthenticatedOptions = (
   <>
-      <NavLink className="navlinks" to="/signup">Sign Up/Log In</NavLink>
-      {/* <NavLink className="navlinks" to="/login">Log In</NavLink> */}
+      {/* <NavLink className="navlinks" to="/signup">Sign Up/Log In</NavLink> */}
+      <NavLink className="navlinks" to="/login">Log In</NavLink>
   </>
 )
 const alwaysOptions = (

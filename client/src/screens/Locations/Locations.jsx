@@ -18,14 +18,12 @@ function Locations(props) {
   return (
     <Layout user={props.user}>
     <div className='locations-main'>
+      <div className='locations-images'>
         {locations.map(location => (
-          <div className='locations-images'>
-            <img src={location.image} alt={location.name} />
-        {/* <h3 className='hidden'>{locations[0].name}</h3>
-        <h3 className='hidden'>{locations[1].name}</h3>
-        <h3 className='hidden'>{locations[2].name}</h3> */}
-          </div>
+        <img src={location.image} alt={location.name} />
+        // <h3 className='hidden'>{location.name}</h3>
         ))}
+          </div>
       <div className='locations-list'>
       <h2>ALL LOCATIONS</h2>
         {locations.map(location => (

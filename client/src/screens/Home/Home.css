@@ -33,3 +33,31 @@
   font-family: "Rajdhani", sans-serif;
   font-weight: 300;
 }
+
+@media only screen and (max-width: 560px) {
+  .home-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .home-helper-text h1 {
+    font-size: 44px;
+  }
+
+  .home-helper-text p {
+    font-size: 15px;
+  }
+
+  .home-hero-img h3 {
+    position: static;
+    font-size: 25px;
+  }
+  .home-hero-img {
+    position: static;
+  }
+
+  .home-hero-img img {
+    width: 350px;
+  }
+}

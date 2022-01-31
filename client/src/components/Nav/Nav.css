@@ -17,7 +17,6 @@
   background-color: #48cae4;
   text-decoration: none;
   grid-area: s;
-  /* align-self: center; */
   padding: 55px 0;
 }
 
@@ -32,4 +31,22 @@
   text-decoration: none;
   color: white;
   padding: 0 10px;
+}
+
+@media only screen and (max-width: 560px) {
+  .nav-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: 0.4fr 0.4fr;
+    grid-template-areas:
+      "s s n n n"
+      "s s . . .";
+    height: 140px;
+  }
+  .nav-name {
+    font-size: 44px;
+  }
+  .nav-links {
+    font-size: 16px;
+  }
 }
