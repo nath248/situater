@@ -78,3 +78,6 @@ dj-database-url
 python-dotenv
 
 # Resources
+
+https://codesandbox.io/s/naughty-sara-q3m16?file=/src/index.js
+https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks

@@ -40,6 +40,10 @@ function AttractionDetails(props) {
     props.setToggle((prevToggle) => !prevToggle)
   }
 
+  const handleEdit = () => { 
+    nav(`/attractions/${attraction.id}/edit`)
+  }
+
   return (
     <Layout user={props.user}>
     <div className="attraction-details-main">
@@ -60,7 +64,7 @@ function AttractionDetails(props) {
           <p>$ {attraction.price}</p>
           <p>{attraction.rating} Rating</p>
         </div>
-        <Link to={`/attractions/${attraction.id}/edit`}>EDIT</Link>
+        <button onClick={handleEdit}>EDIT</button>
         <button onClick={handleDelete}>DELETE</button>
       </div>
       </div>
