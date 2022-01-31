@@ -60,15 +60,15 @@ function AddAttraction(props) {
                   })
                 }
               </select>
-            <label>Attraction Name:</label>
+            <label className='add-attraction-fix'>Attraction Name:</label>
             <input placeholder='Enter Name' value={attraction.name} name='name' required onChange={handleChange} /> <br/>
             <label>Image URL:</label>
             <input placeholder='Enter Image URL' value={attraction.image} name='image' required onChange={handleChange} /> <br/>
-            <label>Type:</label><br/>
+            <label className='add-attraction-fix1'>Type:</label><br/>
             <input placeholder='Enter Type' value={attraction.type} name='type' required onChange={handleChange} /> <br/>
-            <label>Price:</label><br/>
+            <label className='add-attraction-fix1'>Price:</label><br/>
             <input placeholder='Enter Price' value={attraction.price} name='price' required onChange={handleChange} /> <br/>
-            <label>Rating:</label>
+            <label className='add-attraction-fix2'>Rating: </label>
             <input placeholder='Enter Rating' value={attraction.rating} name='rating' required onChange={handleChange} /> <br/>
             <button type='submit'>ADD</button>
           </form>

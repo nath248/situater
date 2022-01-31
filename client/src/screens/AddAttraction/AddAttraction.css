@@ -66,6 +66,19 @@
   text-decoration: underline;
 }
 
+.add-attraction-fix {
+  padding-left: 90px;
+}
+
+.add-attraction-fix1 {
+  margin-left: -80px;
+}
+
+.add-attraction-fix2 {
+  padding-left: 0px;
+  margin-left: -20px;
+}
+
 @media only screen and (max-width: 560px) {
   .add-attraction-main {
     display: flex;
@@ -116,5 +129,13 @@
     width: 100px;
     height: 30px;
     font-size: 15px;
+  }
+
+  .add-attraction-fix {
+    padding-left: 50px;
+  }
+
+  .add-attraction-fix1 {
+    margin-left: -40px;
   }
 }

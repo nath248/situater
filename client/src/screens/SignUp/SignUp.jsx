@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { signUp } from '../../services/users'
 import { useNavigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
+import {Link} from 'react-router-dom'
 
 function SignUp(props) {
   const navigate = useNavigate()
@@ -11,9 +12,6 @@ function SignUp(props) {
     username: '',
     email: '',
     password: '',
-    passwordConfirmation: '',
-    isError: false,
-    errorMsg: '',
   })
 
   const handleChange = (event) =>
@@ -35,9 +33,6 @@ function SignUp(props) {
         username: '',
         email: '',
         password: '',
-        passwordConfirmation: '',
-        isError: true,
-        errorMsg: 'Sign Up Details Invalid',
       })
     }
   }
@@ -55,7 +50,7 @@ function SignUp(props) {
     }
   }
 
-  const { username, email, password, passwordConfirmation } = form
+  const { username, email, password } = form
   return (
     <Layout user={props.user}>
     <div className='sign-up-main'>
@@ -63,6 +58,7 @@ function SignUp(props) {
         <h1>Sign Up for exclusive access!</h1>
         <p>Enhance our users experiance by adding new locations & attractions to the feed.</p>
         <p>Before completing sign up please ensure all data entered is correct.</p>
+          <p>If you are already registered <Link to='/login'>Log In</Link>!</p>
       </div>
       <div className='sign-up-form'>
         <form onSubmit={onSignUp}>
@@ -72,8 +68,6 @@ function SignUp(props) {
           <input required type="text" name="username" value={username} placeholder='Please Enter a Username' onChange={handleChange} />
           <label>Password:</label>
           <input required type="password" name="password" value={password} placeholder='Please Enter a Password' onChange={handleChange} />
-          <label>Password Confirmation:</label>
-          <input required type="password" name="passwordConfirmation" value={passwordConfirmation} placeholder='Please Confirm Password' onChange={handleChange} />
           {renderError()}
         </form>
       </div>

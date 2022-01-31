@@ -37,11 +37,11 @@ function App() {
         <Route path="/locations" element={<Locations user={user} />}/>
         <Route path="/locations/:id" element={<LocationDetails user={user} setToggle={setToggle} />} />
         <Route path="/locations/:id/edit" element={user ? <EditLocation user={user} /> : <Navigate to='/' />} />
-        <Route path="/add-location" element={user ? <AddLocation user={user} /> : <Navigate to="/login" />} />
+        <Route path="/add-location" element={user ? <AddLocation user={user} /> : <Navigate to="/signup" />} />
         <Route path="/attractions" element={<Attractions user={user} />}/>
         <Route path="/attractions/:id" element={<AttractionDetails user={user} setToggle={setToggle} />} />
         <Route path="/attractions/:id/edit" element={user ? <EditAttraction user={user} /> : <Navigate to='/' />} />
-        <Route path="/add-attraction" element={user ? <AddAttraction user={user} /> : <Navigate to="/login" />} />
+        <Route path="/add-attraction" element={user ? <AddAttraction user={user} /> : <Navigate to="/signup" />} />
       </Routes>
     </div>
   );
