@@ -66,13 +66,13 @@ function SignUp(props) {
       </div>
       <div className='sign-up-form'>
         <form onSubmit={onSignUp}>
-          <label>Email Address</label>
+          <label>Email Address:</label>
           <input required type="email" name="email" value={email} placeholder='Please Enter an Email Address' onChange={handleChange} />
-          <label>Username</label>
+          <label>Username:</label>
           <input required type="text" name="username" value={username} placeholder='Please Enter a Username' onChange={handleChange} />
-          <label>Password</label>
+          <label>Password:</label>
           <input required type="password" name="password" value={password} placeholder='Please Enter a Password' onChange={handleChange} />
-          <label>Password Confirmation</label>
+          <label>Password Confirmation:</label>
           <input required type="password" name="passwordConfirmation" value={passwordConfirmation} placeholder='Please Confirm Password' onChange={handleChange} />
           {renderError()}
         </form>

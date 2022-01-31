@@ -1,0 +1,56 @@
+.log-in-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+  justify-self: center;
+}
+
+.log-in-helper-text {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.log-in-helper-text h1 {
+  font-size: 64px;
+  font-weight: 100;
+}
+
+.log-in-helper-text p {
+  font-size: 30px;
+}
+
+.log-in-form {
+  position: relative;
+  bottom: 100px;
+}
+
+.log-in-form input {
+  width: 560px;
+  height: 70px;
+  background-color: #caf0f8;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-left: 10px;
+}
+
+.log-in-form input::placeholder {
+  font-size: 20px;
+}
+
+.log-in-form label {
+  font-size: 40px;
+  position: relative;
+  right: 200px;
+}
+
+button {
+  border: none;
+  background-color: #48cae4;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  text-decoration: underline;
+}

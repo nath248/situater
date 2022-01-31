@@ -2,6 +2,7 @@ import './LogIn.css'
 import { useState } from 'react'
 import { logIn } from '../../services/users'
 import { useNavigate } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
 
 function LogIn(props) {
@@ -59,14 +60,14 @@ function LogIn(props) {
     <div className='log-in-main'>
       <div className='log-in-helper-text'>
         <h1>Log In for exclusive access!</h1>
-        <p>Don't have an account with us? No worries, <span className='underline'>Sign Up</span> here to not miss out!</p>
+        <p>Don't have an account with us? No worries, <Link to='/signup' className='signup link'>Sign Up</Link> here to not miss out!</p>
       </div>
       <div className='log-in-form'>
         <form onSubmit={onLogIn}>
-          <label>Username</label>
-          <input required type="username" name="username" value={username} placeholder='Enter Username' onChange={handleChange}/>
-          <label>Password</label>
-          <input required type="password" name="password" value={password} placeholder='Enter Password' onChange={handleChange} />
+          <label>Username:</label><br/>
+          <input required type="username" name="username" value={username} placeholder='Enter Username' onChange={handleChange}/> <br/>
+          <label>Password:</label><br/>
+          <input required type="password" name="password" value={password} placeholder='Enter Password' onChange={handleChange} /> <br/>
           {renderError()}
         </form>
       </div>

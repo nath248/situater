@@ -7,7 +7,7 @@ function Home(props) {
   const [currentImage, setCurrentImage] = useState(0)
   const [images, setImages] = useState([
     "https://res.cloudinary.com/dojhf40bp/image/upload/c_scale,w_750/v1642995060/rafael-cisneros-mendez-y5PG8ZecXQI-unsplash_h3fujm.jpg",
-    "https://res.cloudinary.com/dojhf40bp/image/upload/c_scale,h_500,w_750/v1642995061/hugh-whyte-SBOHLtENzEY-unsplash_sgvuoj.jpg",
+    "https://res.cloudinary.com/dojhf40bp/image/upload/c_scale,w_750/v1643583695/o-escribenos-hotelposadadelsol_zjxzwy.jpg",
     "https://res.cloudinary.com/dojhf40bp/image/upload/c_scale,w_750/v1643120632/joseph-barrientos-haOaBVJ45pU-unsplash_k6j1sq.jpg"
   ])
   const [name, setName] = useState([
@@ -23,7 +23,7 @@ function Home(props) {
         setCurrentImage(0)
       }
       return currentImage;
-    }, 2000);
+    }, 2500);
     return () => clearInterval(interval);
   }, [images.length, currentImage]);
 

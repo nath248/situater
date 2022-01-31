@@ -6,7 +6,7 @@
 }
 
 .home-helper-text {
-  width: 60%;
+  width: 80%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,4 +19,17 @@
 
 .home-helper-text p {
   font-size: 30px;
+}
+
+.home-hero-img {
+  position: relative;
+  bottom: 100px;
+}
+
+.home-hero-img h3 {
+  position: relative;
+  bottom: 80px;
+  font-size: 40px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
 }
