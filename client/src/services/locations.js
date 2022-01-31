@@ -1,5 +1,11 @@
 import api from './apiConfig'
 
+const getToken = () => {
+  return new Promise(resolve => {
+      resolve(`Bearer ${localStorage.getItem('token') || null}`)
+  })
+}
+
 export const getLocations = async () => {
   try {
       const response = await api.get('/locations/')
@@ -20,7 +26,14 @@ export const getLocation = async id => {
 
 export const createLocation = async location => {
   try {
-      const response = await api.post('/locations/', location)
+      const token = await getToken();
+
+      const headers = {
+        headers: {
+          Authorization: token,
+        },
+      };
+      const response = await api.post('/locations/', location, headers)
       return response.data
   } catch (error) {
       throw error
@@ -29,7 +42,14 @@ export const createLocation = async location => {
 
 export const updateLocation = async (id, location) => {
   try {
-      const response = await api.put(`/locations/${id}/`, location)
+      const token = await getToken();
+
+      const headers = {
+        headers: {
+          Authorization: token,
+        },
+      };
+      const response = await api.put(`/locations/${id}/`, location, headers)
       return response.data
   } catch (error) {
       throw error
@@ -38,7 +58,14 @@ export const updateLocation = async (id, location) => {
 
 export const deleteLocation = async id => {
   try {
-      const response = await api.delete(`/locations/${id}/`)
+      const token = await getToken();
+
+      const headers = {
+        headers: {
+          Authorization: token,
+        },
+      };
+      const response = await api.delete(`/locations/${id}/`, headers)
       return response.data
   } catch (error) {
       throw error

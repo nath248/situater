@@ -2,7 +2,7 @@ import "./AttractionDetails.css";
 import { useState, useEffect } from "react";
 import { getAttraction, deleteAttraction } from "../../services/attractions";
 import { getLocations } from "../../services/locations";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 
 function AttractionDetails(props) {
