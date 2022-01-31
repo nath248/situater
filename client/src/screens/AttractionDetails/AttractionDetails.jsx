@@ -63,9 +63,11 @@ function AttractionDetails(props) {
           <p>{attraction.type}</p>
           <p>$ {attraction.price}</p>
           <p>{attraction.rating} Rating</p>
+        <div className='attraction-details-buttons'>
+          <button onClick={handleEdit}>EDIT</button>
+          <button onClick={handleDelete}>DELETE</button>
         </div>
-        <button onClick={handleEdit}>EDIT</button>
-        <button onClick={handleDelete}>DELETE</button>
+        </div>
       </div>
       </div>
       </Layout>

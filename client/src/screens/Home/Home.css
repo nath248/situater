@@ -55,6 +55,8 @@
   }
   .home-hero-img {
     position: static;
+    width: 350px;
+    height: 233px;
   }
 
   .home-hero-img img {

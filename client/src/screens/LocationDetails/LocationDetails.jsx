@@ -35,14 +35,14 @@ function LocationDetails(props) {
 
   return (
     <Layout user={props.user}>
-    <div className='location-details-main'>
-      <div className='location-details-img'>
-          <h3>{location.name}</h3>
-          <img src={`${location.image}`} alt={location.name} />
-      </div>
-      <div className='location-details-info'>
-        <h3>Check Out All These Cool Locations!</h3>
-        <h3>Explore New Horizons!</h3>
+      <div className='location-details-main'>
+        <div className='location-details-img'>
+            <h3>{location.name}</h3>
+            <img src={`${location.image}`} alt={location.name} />
+        </div>
+        <div className='location-details-info'>
+          <h3>Check Out All These Cool Locations!</h3>
+          <h3>Explore New Horizons!</h3>
           <div className='location-details-info-box'>
           {location.attractions.length &&
               location.attractions.map((list) => (
@@ -51,10 +51,12 @@ function LocationDetails(props) {
                 <br />
               </>
           ))}
-            </div>
-        <button onClick={handleEdit}>EDIT</button>
-        <button onClick={handleDelete}>DELETE</button>
-      </div>
+          <div className='location-details-buttons'>
+            <button onClick={handleEdit}>EDIT</button>
+            <button onClick={handleDelete}>DELETE</button>  
+          </div>
+          </div>
+        </div>
       </div>
     </Layout>
   )

@@ -25,8 +25,10 @@
 }
 
 .attractions-images img {
-  margin: 0 10px;
+  margin: 20px 30px;
   transition: transform 0.2s;
+  width: 400px;
+  height: 350px;
 }
 
 /* .hidden {
@@ -41,3 +43,31 @@
 /* .hidden:hover {
   display: inline;
 } */
+
+@media only screen and (max-width: 560px) {
+  .attractions-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .attractions-images img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .attractions-list h2 {
+    font-size: 40px;
+  }
+
+  .attraction-link {
+    background-color: #caf0f8;
+    width: 480px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .attraction-link a {
+    font-size: 25px;
+  }
+}

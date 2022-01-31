@@ -11,12 +11,17 @@
   right: 60px;
 }
 
+.location-details-img img {
+  width: 500px;
+  height: 450px;
+}
+
 .location-details-img h3 {
   color: white;
   text-shadow: 2px 2px #000000;
   font-size: 50px;
   position: relative;
-  top: 250px;
+  top: 300px;
 }
 
 .location-details-info {
@@ -39,7 +44,7 @@
   height: 60px;
   font-size: 45px;
   font-family: "Rajdhani", sans-serif;
-  text-decoration: underline;
+  text-decoration: none;
   padding: 1px 6px;
   appearance: auto;
   text-rendering: auto;
@@ -62,4 +67,53 @@
 
 .location-details-info button {
   margin: 20px 10px;
+}
+
+@media only screen and (max-width: 560px) {
+  .location-details-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 480px;
+  }
+  .location-details-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 40px 40px 150px;
+  }
+
+  .location-details-img img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .location-details-img h3 {
+    position: relative;
+    top: 180px;
+    font-size: 30px;
+  }
+
+  .location-details-info {
+    width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .location-details-info h3 {
+    position: static;
+    font-size: 25px;
+  }
+
+  .location-details-info a {
+    width: 380px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

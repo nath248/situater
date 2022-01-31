@@ -11,12 +11,17 @@
   right: 60px;
 }
 
+.attraction-details-img img {
+  width: 500px;
+  height: 450px;
+}
+
 .attraction-details-img h3 {
   color: white;
   text-shadow: 2px 2px #000000;
   font-size: 50px;
   position: relative;
-  top: 250px;
+  top: 300px;
 }
 
 .attraction-details-info {
@@ -68,4 +73,59 @@
 .attraction-details-info-box p {
   font-size: 50px;
   font-family: "Rajdhani", sans-serif;
+}
+
+@media only screen and (max-width: 560px) {
+  .attraction-details-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 480px;
+  }
+  .attraction-details-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 40px 40px 150px;
+  }
+
+  .attraction-details-img img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .attraction-details-img h3 {
+    position: relative;
+    top: 180px;
+    font-size: 30px;
+  }
+
+  .attraction-details-info {
+    width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .attraction-details-info h3 {
+    position: static;
+    font-size: 25px;
+  }
+
+  .attraction-details-info a {
+    width: 380px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .attraction-details-info-box h1,
+  .attraction-details-info-box p {
+    font-size: 30px;
+    font-family: "Rajdhani", sans-serif;
+  }
 }
