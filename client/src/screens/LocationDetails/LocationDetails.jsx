@@ -29,6 +29,10 @@ function LocationDetails(props) {
     props.setToggle((prevToggle) => !prevToggle)
   }
 
+  const handleEdit = () => { 
+    nav(`/locations/${location.id}/edit`)
+  }
+
   return (
     <Layout user={props.user}>
     <div className='location-details-main'>
@@ -41,11 +45,14 @@ function LocationDetails(props) {
         <h3>Explore New Horizons!</h3>
           <div className='location-details-info-box'>
           {location.attractions.length &&
-            location.attractions.map((list) => (
-              <Link to={`/locations/${location.id}`} key={list.id}>{list.name}</Link>
+              location.attractions.map((list) => (
+              <>
+                <Link to={`/locations/${location.id}`} key={list.id}>{list.name}</Link>
+                <br />
+              </>
           ))}
             </div>
-        <Link to={`/locations/${location.id}/edit`}>EDIT</Link>
+        <button onClick={handleEdit}>EDIT</button>
         <button onClick={handleDelete}>DELETE</button>
       </div>
       </div>
