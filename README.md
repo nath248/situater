@@ -30,13 +30,24 @@ You can use below endpoint to access locations by id. Replace the `<id>` with th
 
 GET - /location/`<id>`
 
-### Example:
-
-### Name
-
-You can use below endpoint to access locations by name. Replace the `<name>` with the actual name number of the location.
-
-GET - /location/`<name>`
+```
+{
+  "id": 1,
+  "name": "Cancun, Mexico",
+  "image": "https://res.cloudinary.com/dojhf40bp/image/upload/c_scale,h_400,w_400/v1643120632/joseph-barrientos-haOaBVJ45pU-unsplash_k6j1sq.jpg",
+  "attractions": [
+            {
+            "id": 1,
+            "name": "Xcaret Cenote Tour",
+            "image": "https://res.cloudinary.com/dojhf40bp/image/upload/c_scale,h_350,w_400/v1643121103/blog-xichen-9-1080x640_piysxd.jpg",
+            "type": "Natural Attraction",
+            "price": 199,
+            "rating": "4/5",
+            "location": 1
+            }
+          ]
+}
+```
 
 ### Example:
 
@@ -48,23 +59,17 @@ You can use below endpoint to access locations by id. Replace the `<id>` with th
 
 GET - /location/`<id>`
 
-### Example:
-
-### Type
-
-You can use below endpoint to access locations by type. Replace the `<type>` with the actual type number of the attraction.
-
-GET - /location/`<type>`
-
-### Example:
-
-### Rating
-
-You can use below endpoint to access locations by rating. Replace the `<rating>` with the actual rating number of the attraction.
-
-GET - /location/`<rating>`
-
-### Example:
+```
+{
+    "id": 1,
+    "name": "Xcaret Cenote Tour",
+    "image": "https://res.cloudinary.com/dojhf40bp/image/upload/c_scale,h_350,w_400/v1643121103/blog-xichen-9-1080x640_piysxd.jpg",
+    "type": "Natural Attraction",
+    "price": 199,
+    "rating": "4/5",
+    "location": 1
+}
+```
 
 # Dependencies
 
