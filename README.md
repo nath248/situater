@@ -20,7 +20,7 @@ The SITUATER app allows the user to get information on different attrations in a
 
 [hierarchy]: https://res.cloudinary.com/dojhf40bp/image/upload/v1643057267/component-hierarchy_qu334f.png "Component Hierarchy"
 
-# Endpoints
+# API Endpoints
 
 ## Locations
 
@@ -28,7 +28,7 @@ The SITUATER app allows the user to get information on different attrations in a
 
 You can use below endpoint to access locations by id. Replace the `<id>` with the actual id number of the location.
 
-GET - /location/`<id>`
+GET - https://situater.herokuapp.com/locations/`<id>`
 
 ```
 {
@@ -57,7 +57,7 @@ GET - /location/`<id>`
 
 You can use below endpoint to access locations by id. Replace the `<id>` with the actual id number of the attraction.
 
-GET - /location/`<id>`
+GET - https://situater.herokuapp.com/attractions/`<id>`
 
 ```
 {
@@ -73,16 +73,16 @@ GET - /location/`<id>`
 
 # Dependencies
 
-django
-psycopg2
-djangorestframework
-djangorestframework-simplejwt
-gunicorn
-whitenoise
-dj-database-url
-python-dotenv
+- django
+- psycopg2
+- djangorestframework
+- djangorestframework-simplejwt
+- gunicorn
+- whitenoise
+- dj-database-url
+- python-dotenv
 
 # Resources
 
-https://codesandbox.io/s/naughty-sara-q3m16?file=/src/index.js
-https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks
+- https://codesandbox.io/s/naughty-sara-q3m16?file=/src/index.js
+- https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks
