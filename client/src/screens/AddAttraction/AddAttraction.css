@@ -65,3 +65,56 @@
   font-size: 30px;
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 560px) {
+  .add-attraction-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-attraction-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-attraction-form input,
+  .add-attraction-form select {
+    width: 360px;
+    height: 50px;
+  }
+
+  .add-attraction-helper-text h1 {
+    font-size: 44px;
+  }
+
+  .add-attraction-helper-text p {
+    font-size: 20px;
+  }
+
+  .add-attraction-form {
+    position: static;
+  }
+
+  .add-attraction-form label {
+    font-size: 20px;
+    position: relative;
+    right: 140px;
+  }
+
+  .add-attraction-form label:first-child {
+    position: relative;
+    right: 120px;
+  }
+
+  .add-attraction-form input::placeholder {
+    font-size: 15px;
+  }
+
+  .add-attraction-form button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
+}

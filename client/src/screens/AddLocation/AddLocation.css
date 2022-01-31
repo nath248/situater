@@ -59,3 +59,55 @@
   font-size: 30px;
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 560px) {
+  .add-location-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-location-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-location-form input {
+    width: 360px;
+    height: 50px;
+  }
+
+  .add-location-helper-text h1 {
+    font-size: 44px;
+  }
+
+  .add-location-helper-text p {
+    font-size: 20px;
+  }
+
+  .add-location-form {
+    position: static;
+  }
+
+  .add-location-form label {
+    font-size: 20px;
+    position: relative;
+    right: 140px;
+  }
+
+  .add-location-form label:first-child {
+    position: relative;
+    right: 125px;
+  }
+
+  .add-location-form input::placeholder {
+    font-size: 15px;
+  }
+
+  .add-location-form button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
