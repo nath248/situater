@@ -13,9 +13,7 @@ function Locations(props) {
       setLocations(allLocations);
     };
     fetchLocations();
-  }, []);
-
-  props.setToggle((prevToggle) => !prevToggle);
+  }, [props.toggle]);
 
   return (
     <Layout user={props.user}>
