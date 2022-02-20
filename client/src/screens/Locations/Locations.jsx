@@ -13,7 +13,7 @@ function Locations(props) {
       setLocations(allLocations);
     };
     fetchLocations();
-  }, [props.toggle]);
+  }, [locations]);
 
   return (
     <Layout user={props.user}>

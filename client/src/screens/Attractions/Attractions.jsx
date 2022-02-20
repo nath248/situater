@@ -13,7 +13,7 @@ function Attractions(props) {
       setAttractions(allAttractions);
     };
     fetchAttractions();
-  }, []);
+  }, [attractions]);
 
   return (
     <Layout user={props.user}>
