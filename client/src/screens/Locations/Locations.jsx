@@ -15,6 +15,8 @@ function Locations(props) {
     fetchLocations();
   }, []);
 
+  props.setToggle((prevToggle) => !prevToggle);
+
   return (
     <Layout user={props.user}>
       <div className="locations-main">
